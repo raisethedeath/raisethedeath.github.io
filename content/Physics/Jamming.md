@@ -1,0 +1,3 @@
+- [[Jamming as a topological satisfiability transition with contact number hyperuniformity and criticality]]
+- [[The geometry of jamming algorithms in the random Lorentz gas]]
+- 

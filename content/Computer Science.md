@@ -1,0 +1,13 @@
+[[超算平台登陆]]
+[[Linux系统常用操作指令汇总]]
+[[Vim常用指令汇总]]
+[[Vim的复制粘贴]]
+[[Vim查找功能]]
+
+[[Python_Linux]]
+[[git]]
+[[Obsidian]]
+
+[[Skills]]
+[[Skills2]]
+
