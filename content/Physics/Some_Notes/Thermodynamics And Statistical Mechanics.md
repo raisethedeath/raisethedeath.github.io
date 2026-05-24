@@ -17,5 +17,9 @@
 - [[4.9]]
 - [[4.15]]
 - [[Chap5 习题课P3]]
+- [[Chap5 习题课P2]]
 - [[Chap5 习题课P1]]
+
+## Discussion
+[[Discussion Of Legendre Transformation]]
 

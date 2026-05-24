@@ -1,29 +1,29 @@
 # Problem 1 (Gibbs free energy of a dilute solution ★★★★).  
-Consider a dilute solution consisting of $ N $ solute particles $ X $ and $ N_Y $ solvent particles $ Y $. In the dilute limit, the Helmholtz free energy is  
+Consider a dilute solution consisting of $N$ solute particles $X$ and $N_Y$ solvent particles $Y$. In the dilute limit, the Helmholtz free energy is  
 $$F_{XY}(T, V, N, N_Y) = F_Y(T, V, N_Y) + NT[\log(n\lambda^3) - 1] + N\Delta(T, n_Y), \tag{1}$$  
 where  
 $$n = \frac{N}{V}, \quad n_Y = \frac{N_Y}{V}.$$  
-Here $\lambda$ is the thermal wavelength of the solute, and $ \Delta(T, n_Y) $ is the solvation free energy of one solute particle in a solvent of density $ n_Y $.  
-We now work at fixed $ T, P, N, N_Y $. The Gibbs free energy is obtained by minimizing $ F_{XY} + PV $ with respect to $ V $:  
+Here $\lambda$ is the thermal wavelength of the solute, and $\Delta(T, n_Y)$ is the solvation free energy of one solute particle in a solvent of density $n_Y$.  
+We now work at fixed $T, P, N, N_Y$. The Gibbs free energy is obtained by minimizing $F_{XY} + PV$ with respect to $V$:  
 $$G_{XY}(T, P, N, N_Y) = \min_V [F_{XY}(T, V, N, N_Y) + PV]. \tag{2}$$  
-(a) Write down the stationarity condition that determines the equilibrium volume $ V^* $ of the dilute solution.  
-(b) Let $ V^0 $ be the equilibrium volume of the pure solvent at the same $ T, P, N_Y $, satisfying  
+(a) Write down the stationarity condition that determines the equilibrium volume $V^*$ of the dilute solution.  
+(b) Let $V^0$ be the equilibrium volume of the pure solvent at the same $T, P, N_Y$, satisfying  
 $$\left( \frac{\partial F_Y}{\partial V} \right)_{T, N_Y, V^0} + P = 0.$$ 
 Assume  
 $$V^* = V^0 + \delta V, \quad \delta V = O(N).$$  
-Solve the stationarity condition perturbatively to first order in $ N $, and find an expression for $ \delta V $.  
-(c) Show that, although $ \delta V = O(N) $, it does not contribute to $ G_{XY} $ to first order in $ N $. Hence show that  
+Solve the stationarity condition perturbatively to first order in $N$, and find an expression for $\delta V$.  
+(c) Show that, although $\delta V = O(N)$, it does not contribute to $G_{XY}$ to first order in $N$. Hence show that  
 $$G_{XY}(T, P, N, N_Y) = G_Y(T, P, N_Y) + NT[\log(n\lambda^3) - 1] + N\Delta(T, n_Y) + O(N^2), \tag{3}$$  
 where  
 $$ G_Y(T, P, N_Y) = F_Y(T, V^0, N_Y) + PV^0. $$  
-In the $ O(N) $ terms, $ V, n = N/V $, and $ n_Y = N_Y/V $ may be evaluated at $ V = V^0 $, since replacing $ V^0 $ by $ V^* $ only changes the result by $ O(N^2) $.  
+In the $O(N)$ terms, $V, n = N/V$, and $n_Y = N_Y/V$ may be evaluated at $ V = V^0 $, since replacing $V^0$ by $V^*$ only changes the result by $ O(N^2) $.  
 (d) Use Eq. (3) to derive the solute chemical potential  
 $$ \mu_X = \left( \frac{\partial G_{XY}}{\partial N} \right)_{T,P,N_Y}. $$  
 
 (e) Use Eq. (3) to derive the solvent chemical potential  
 $$ \mu_Y = \left( \frac{\partial G_{XY}}{\partial N_Y} \right)_{T,P,N}. $$  
 
-Show that, to first order in the solute mole fraction $ x $,  
+Show that, to first order in the solute mole fraction $x$,  
 $$ \mu_Y = \mu_Y^{\text{pure}}(T, P) - Tx. $$  
 (f) Compare these results with the chemical potentials obtained previously from the dilute-solution Helmholtz free energy.
 
