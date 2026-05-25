@@ -1,3 +1,3 @@
-- [[Sakurai.pdf]]
 - [[现代量子力学 Sakurai]]
+- [[Sakurai]]
 - 
