@@ -71,7 +71,15 @@ const config: QuartzConfig = {
       Plugin.TableOfContents(),
       Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),
       Plugin.Description(),
-      Plugin.Latex({ renderEngine: "mathjax" }),
+      // Plugin.Latex({ renderEngine: "katex" }),
+      Plugin.Latex({ 
+        renderEngine: 'mathjax',
+        mathJaxOptions: {
+        tex: {
+          tags: 'ams', // 完美开启 tag 和自动编号支持
+        }
+      }
+    }),
     ],
     filters: [Plugin.RemoveDrafts()],
     emitters: [

@@ -12,20 +12,17 @@
 # [[Diary]]
 # [[Physics Note]]
 ## Electrodynamics
-- [Electrodynamics](D:\Materials\Physics\Electrodynamics (Course))
 - [[Electrodynamics Problems]]
 ## Thermodynamics & Statistical Mechanics
-- [Thermodynamics](D:\Materials\Physics\Statistical_Mechanics_(Course))
 - [[Thermodynamics And Statistical Mechanics]]
 
 ## Solid State Physics
-- [Solid State Physics](D:\Materials\Physics\Solid_State_Physics (Course))
 - [[Solid State Physics]]
 
 ## Landau Theory
-[Landau十卷](D:\Materials\Physics\朗道十卷)
 
 # Chemistry
+
 ## Experiment
 
 
