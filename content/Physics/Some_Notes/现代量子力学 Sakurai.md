@@ -1,0 +1,310 @@
+
+# 1.5 基的改变
+
+## 变换算符
+基矢集合的改变称之为==基矢的改变或者表象的改变==。由$\{|a'\rangle\}$给定基本右矢的基被称为A表象，有时也称为A对角表象，因为在这个基中A所对应的方阵是对角矩阵。
+
+我们的基本任务是构造一个变换算符，它把老的正交归一集合$\{|a'\rangle\}$和新的正交归一集合$\{|b'\rangle\}$联系起来。为此，我们首先证明下述定理。
+
+**定理1.3** 给定两个基右矢的集合，它们都满足正交归一性和完备性，则存在这样的一个幺正算符U，使得
+$$|b^{(1)}\rangle=U|a^{(1)}\rangle,|b^{(2)}\rangle=U|a^{(2)}\rangle\cdots,|b^{(N)}\rangle=U|a^{(N)}\rangle. \tag{1.5.1}$$
+作为一个幺正算符，我们指的是一个算符满足条件
+$$U^\dagger U=1 \tag{1.5.2}$$
+和
+$$UU^\dagger=1. \tag{1.5.3}$$
+
+**证明** 我们通过具体地构建来证明这个定理。我们断定算符
+$$U=\sum_k|b^{(k)}\rangle\langle a^{(k)}| \tag{1.5.4}$$
+将满足这一要求，并把这个U作用于$|a^{(l)}\rangle$上。显然，$\{|a'\rangle\}$的正交归一性保障了
+$$U|a^{(l)}\rangle=|b^{(l)}\rangle. \tag{1.5.5}$$
+另外，U是幺正的：
+$$U^\dagger U=\sum_k\sum_l|a^{(l)}\rangle\langle b^{(l)}|b^{(k)}\rangle\langle a^{(k)}|=\sum_k|a^{(k)}\rangle\langle a^{(k)}|=1. \tag{1.5.6}$$
+其中，我们用到了$\{|b'\rangle\}$的正交归一性和$\{|a'\rangle\}$的完备性。用类似的方式我们得到关系式(1.5.3)式。
+
+## 变换矩阵
+研究算符U在老的基$\{|a'\rangle\}$中的矩阵表示是有意义的。我们有
+$$\langle a^{(k)}|U|a^{(l)}\rangle=\langle a^{(k)}|b^{(l)}\rangle, \tag{1.5.7}$$
+它显然来自于(1.5.5)式。换言之，U算符的矩阵元由老基左矢和新基右矢的内积构成。我们记得在三维空间中，把一组单位基矢量$(\hat{\mathbf{x}},\hat{\mathbf{y}},\hat{\mathbf{z}})$变为另一组单位基矢量$(\hat{\mathbf{x}}',\hat{\mathbf{y}}',\hat{\mathbf{z}}')$的转动矩阵可以写成[例如Goldstein(2002)，134~144页]
+$$R=\begin{pmatrix}
+\hat{\mathbf{x}}\cdot\hat{\mathbf{x}}' & \hat{\mathbf{x}}\cdot\hat{\mathbf{y}}' & \hat{\mathbf{x}}\cdot\hat{\mathbf{z}}' \\
+\hat{\mathbf{y}}\cdot\hat{\mathbf{x}}' & \hat{\mathbf{y}}\cdot\hat{\mathbf{y}}' & \hat{\mathbf{y}}\cdot\hat{\mathbf{z}}' \\
+\hat{\mathbf{z}}\cdot\hat{\mathbf{x}}' & \hat{\mathbf{z}}\cdot\hat{\mathbf{y}}' & \hat{\mathbf{z}}\cdot\hat{\mathbf{z}}'
+\end{pmatrix}. \tag{1.5.8}$$
+由$\langle a^{(k)}|U|a^{(l)}\rangle$组成的方矩阵称为从基$\{|a'\rangle\}$到基$\{|b'\rangle\}$的变换矩阵。
+
+给定一个任意右矢$|\alpha\rangle$，它在老基中的展开系数$\langle a'|\alpha\rangle$是已知的，即
+$$|\alpha\rangle=\sum_{a'}|a'\rangle\langle a'|\alpha\rangle. \tag{1.5.9}$$
+怎样得到它在新基中的展开系数$\langle b'|\alpha\rangle$呢？答案非常简单：只要用$\langle b^{(k)}|$乘以(1.5.9)式（为了避免混淆用$a^{(l)}$代替了$a'$）：
+$$\langle b^{(k)}|\alpha\rangle=\sum_l\langle b^{(k)}|a^{(l)}\rangle\langle a^{(l)}|\alpha\rangle=\sum_l\langle a^{(k)}|U^\dagger|a^{(l)}\rangle\langle a^{(l)}|\alpha\rangle. \tag{1.5.10}$$
+用矩阵符号，(1.5.10)式是说，只要用方矩阵$U^\dagger$作用在老基中的列矩阵上，即可得到新基中的列矩阵：
+$$(\text{新})=(U^\dagger)(\text{老}) \tag{1.5.11}$$
+老矩阵元和新矩阵元之间的关系也很容易得到：
+$$\begin{aligned}
+\langle b^{(k)}|X|b^{(l)}\rangle&=\sum_m\sum_n\langle b^{(k)}|a^{(m)}\rangle\langle a^{(m)}|X|a^{(n)}\rangle\langle a^{(n)}|b^{(l)}\rangle \\
+&=\sum_m\sum_n\langle a^{(k)}|U^\dagger|a^{(m)}\rangle\langle a^{(m)}|X|a^{(n)}\rangle\langle a^{(n)}|U|a^{(l)}\rangle.
+\end{aligned} \tag{1.5.12}$$
+这只不过是矩阵代数中熟知的相似变换
+$$X'=U^\dagger XU. \tag{1.5.13}$$
+
+一个算符X的迹定义为对角矩阵元之和：
+$$\text{tr}(X)=\sum_{a'}\langle a'|X|a'\rangle. \tag{1.5.14}$$
+尽管在定义中使用了一组特定的基右矢，但可以证明$\text{tr}(X)$是不依赖于表象的，如下所示：
+$$\begin{aligned}
+\sum_{a'}\langle a'|X|a'\rangle&=\sum_{a'}\sum_{b'}\sum_{b''}\langle a'|b'\rangle\langle b'|X|b''\rangle\langle b''|a'\rangle \\
+&=\sum_{b'}\sum_{b''}\langle b''|b'\rangle\langle b'|X|b''\rangle \\
+&=\sum_{b'}\langle b'|X|b'\rangle.
+\end{aligned} \tag{1.5.15}$$
+
+我们还可以证明：
+$$\text{tr}(XY)=\text{tr}(YX), \tag{1.5.16a}$$
+$$\text{tr}(U^\dagger XU)=\text{tr}(X), \tag{1.5.16b}$$
+$$\text{tr}(|a'\rangle\langle a''|)=\delta_{a'a''}, \tag{1.5.16c}$$
+$$\text{tr}(|b'\rangle\langle a'|)=\langle a'|b'\rangle. \tag{1.5.16d}$$
+
+## 对角化
+到此为止我们还没有讨论：假定一个算符B在老基$\{|a'\rangle\}$中的矩阵元已知，如何找到这个算符的本征值和本征矢。这个问题等价于寻找对角化B的幺正矩阵。尽管读者可能已经熟悉矩阵代数中的对角化程序，用狄拉克的左矢-右矢符号解答这个问题仍是值得的。
+
+我们感兴趣的是求得本征值$b'$和本征右矢$|b'\rangle$。它们有下列性质
+$$B|b'\rangle=b'|b'\rangle. \tag{1.5.17}$$
+首先，我们把上式改写成
+$$\sum_{a'}\langle a''|B|a'\rangle\langle a'|b'\rangle=b'\langle a''|b'\rangle. \tag{1.5.18}$$
+当(1.5.17)式中的$|b'\rangle$代表B的第l个本征右矢时，我们可以用矩阵符号把(1.5.18)式写成如下形式
+$$\begin{pmatrix}
+B_{11} & B_{12} & B_{13} & \cdots \\
+B_{21} & B_{22} & B_{23} & \cdots \\
+\vdots & \vdots & \vdots & \ddots
+\end{pmatrix}\begin{pmatrix}
+C_1^{(l)} \\
+C_2^{(l)} \\
+\vdots
+\end{pmatrix}=b^{(l)}\begin{pmatrix}
+C_1^{(l)} \\
+C_2^{(l)} \\
+\vdots
+\end{pmatrix}, \tag{1.5.19}$$
+其中的
+$$B_{ij}=\langle a^{(i)}|B|a^{(j)}\rangle \tag{1.5.20a}$$
+和
+$$C_k^{(l)}=\langle a^{(k)}|b^{(l)}\rangle, \tag{1.5.20b}$$
+而i，j，k从1取到右矢空间的维数N。正如我们从线性代数中知道的，仅当特征方程
+$$\det(B-\lambda1)=0 \tag{1.5.21}$$
+成立时，$C_k^{(l)}$才可能有非平庸解。这是一个关于$\lambda$的N次代数方程，解得的N个根就等同于我们试图确定的各个$b^{(l)}$。知道了$b^{(l)}$，我们就可以解得相应的$C_k^{(l)}$直至一个由归一化条件确定的整体常数因子。将(1.5.20b)式与(1.5.7)式对比，我们看到$C_k^{(l)}$恰恰就是$\{|a'\rangle\}\to\{|b'\rangle\}$基变换所涉及的幺正矩阵的矩阵元。
+
+对于这种解法，B的厄米性很重要。例如，考虑由(1.3.38)式或(1.4.19)式所定义的$S_+$。这个算符显然是非厄米的。用$S_z$基写出来的相应的矩阵
+$$S_+=\hbar\begin{pmatrix}
+0 & 1 \\
+0 & 0
+\end{pmatrix}, \tag{1.5.22}$$
+不可能用任何幺正矩阵对角化。在第2章我们将遇到一个与简谐振子相干态相关的一个非厄米算符的本征右矢。然而，已经知道这样的本征右矢不能形成一个完备的正交归一基，因此，我们在这一节所发展的公式框架就不能直接使用。
+
+## 幺正等价可观测量
+我们通过讨论可观测量幺正变换的一个著名定理来结束这一节。
+#幺正等价可观测量
+**定理1.4** 再一次考虑由(1.5.4)式的U算符联系着的两组正交归一基$\{|a'\rangle\}$和$\{|b'\rangle\}$。知道了U，我们可以构造A的一个幺正变换，$UAU^{-1}$；则称==A和$UAU^{-1}$为幺正等价可观测量==。A的本征方程，
+$$A|a^{(l)}\rangle=a^{(l)}|a^{(l)}\rangle, \tag{1.5.23}$$
+显然意味着
+$$UAU^{-1}U|a^{(l)}\rangle=a^{(l)}U|a^{(l)}\rangle. \tag{1.5.24}$$
+但是该式可以改写为
+$$(UAU^{-1})|b^{(l)}\rangle=a^{(l)}|b^{(l)}\rangle. \tag{1.5.25}$$
+
+这个看似简单的结果是相当深奥的。它告诉我们，这些$|b'\rangle$是$UAU^{-1}$的本征右矢，它们有着与A的本征值完全相同的本征值。换言之，幺正等价可观测量具有全同的谱。
+
+根据定义，本征右矢$|b^{(l)}\rangle$满足关系
+$$B|b^{(l)}\rangle=b^{(l)}|b^{(l)}\rangle. \tag{1.5.26}$$
+把(1.5.25)式与(1.5.26)式对比，我们推断B和$UAU^{-1}$是可以同时对角化的。一个自然的问题是：$UAU^{-1}$和B本身是相同的吗？在有物理兴趣的情况中，答案通常是"是"的。例如，取$S_x$和$S_z$，它们通过一个幺正算符关联在一起，正如我们在第3章将要讨论的，这个幺正算符实际上是绕y轴转动$\pi/2$角的转动算符。在这种情况下，$S_x$自身就是$S_z$的幺正变换。因为我们知道$S_x$和$S_z$展示了相同的本征值——即，$+\hbar/2$和$-\hbar/2$——可看到在这个特定的例子中，我们的定理是成立的。
+
+# 1.6 位置、动量和平移
+
+## 连续谱
+到目前为止，所考虑的可观测量都被假定具有分立的本征值谱。然而，量子力学中有一些可观测量具有连续的本征值。例如，取动量的z分量$p_z$。在量子力学中这个量再一次用一个厄米算符来表示。然而，与$S_z$大不相同，$p_z$的本征值（在适当的单位下）可以取$-\infty$到$\infty$之间的任何实数值。
+
+连续谱本征右矢所张矢量空间的严格数学是相当靠不住的。这样的一个空间的维数显然是无穷大的。很多从具有分立本征值的有限维矢量空间中得到的结果都可以立即推广。在直接推广不适用的地方，我们会指明危险信号。
+
+我们从与本征值方程(1.2.5)式类似的方程开始，在连续谱的情况下它被写成
+$$\xi|\xi'\rangle=\xi'|\xi'\rangle, \tag{1.6.1}$$
+其中，$\xi$是一个算符，而$\xi'$只是个数。换句话说，右矢$|\xi'\rangle$是算符$\xi$的一个本征右矢，其本征值为$\xi'$，就像$|a'\rangle$是算符A的一个本征右矢，其本征值为$a'$一样。
+
+在追求这一类比时，我们用狄拉克的$\delta$函数替代克罗内克（Kronecker）符号——用对连续变量$\xi'$的积分代替对本征值$\{a'\}$的分立求和——因此，
+$$\langle a'|a''\rangle=\delta_{a'a''}\to\langle\xi'|\xi''\rangle=\delta(\xi'-\xi''), \tag{1.6.2a}$$
+$$\sum_{a'}|a'\rangle\langle a'|=1\to\int d\xi'|\xi'\rangle\langle\xi'|=1, \tag{1.6.2b}$$
+$$|\alpha\rangle=\sum_{a'}|a'\rangle\langle a'|\alpha\rangle\to|\alpha\rangle=\int d\xi'|\xi'\rangle\langle\xi'|\alpha\rangle, \tag{1.6.2c}$$
+$$\sum_{a'}|\langle a'|\alpha\rangle|^2=1\to\int d\xi'|\langle\xi'|\alpha\rangle|^2=1, \tag{1.6.2d}$$
+$$\langle\beta|\alpha\rangle=\sum_{a'}\langle\beta|a'\rangle\langle a'|\alpha\rangle\to\langle\beta|\alpha\rangle=\int d\xi'\langle\beta|\xi'\rangle\langle\xi'|\alpha\rangle, \tag{1.6.2e}$$
+$$\langle a''|A|a'\rangle=a'\delta_{a'a''}\to\langle\xi''|\xi|\xi'\rangle=\xi'\delta(\xi''-\xi'). \tag{1.6.2f}$$
+特别要注意，如何用完备性关系(1.6.2b)式求得(1.6.2c)式和(1.6.2e)式。
+
+## 位置本征右矢和位置测量
+在1.4节我们强调量子力学中的一次测量实质上是一个过滤过程。为了把这种想法扩展到具有连续谱的可观测量的测量，最好的做法是处理一个特殊的例子。为此我们来考虑一维的位置（或坐标）算符。
+
+位置算符x的本征右矢$|x'\rangle$满足
+$$x|x'\rangle=x'|x'\rangle \tag{1.6.3}$$
+人们假定它形成一个完备集。这里$x'$只是一个有着长度量纲的数，例如0.23cm，而x是个算符。一个任意物理态的态右矢可以用$\{|x'\rangle\}$展开：
+$$|\alpha\rangle=\int_{-\infty}^{\infty}dx'|x'\rangle\langle x'|\alpha\rangle. \tag{1.6.4}$$
+
+现在我们考虑位置可观测量的一个高度理想化的选择性测量。假定我们安放了一个非常微小的探测器，仅当粒子精确地处于$x'$处而不在任何其他地方时，该探测器才发出咔嗒声。一经探测器发出咔嗒声，我们就可以说，所谈及的态由$|x'\rangle$表示。换句话说，当该探测器发出咔嗒声时，$|\alpha\rangle$突然"跳入"了$|x'\rangle$，非常类似于一个任意自旋态经由一个$S_z$类型的SG仪器时跳到$S_z+$（或$S_z-$）态。
+
+实际上，探测器最多能做的是把粒子定位于$x'$附近的一个很窄的间隔。当观测到一个粒子位于某个很窄的区间$(x'-\Delta/2,x'+\Delta/2)$时，一个实际的探测器就会发出咔嗒声。当该探测器显出一次计数时，态右矢突然改变如下：
+$$|\alpha\rangle=\int_{-\infty}^{\infty}dx''|x''\rangle\langle x''|\alpha\rangle\xrightarrow{\text{测量}}\int_{x'-\Delta/2}^{x'+\Delta/2}dx''|x''\rangle\langle x''|\alpha\rangle. \tag{1.6.5}$$
+假定在这个狭窄的区间内，$\langle x''|\alpha\rangle$没有可以察觉的变化，探测器发出响声的概率由下式给出
+$$|\langle x'|\alpha\rangle|^2dx', \tag{1.6.6}$$
+其中我们把$\Delta$写成$dx'$。这与测量A时$|\alpha\rangle$跳到$|a'\rangle$的概率为$|\langle a'|\alpha\rangle|^2$类似。在$-\infty$和$\infty$之间的某个地方记录到粒子的概率为：
+$$\int_{-\infty}^{\infty}dx'|\langle x'|\alpha\rangle|^2, \tag{1.6.7}$$
+它是归一到1的，只要$|\alpha\rangle$是归一化的，即
+$$\langle\alpha|\alpha\rangle=1\Rightarrow\int_{-\infty}^{\infty}dx'\langle\alpha|x'\rangle\langle x'|\alpha\rangle=1. \tag{1.6.8}$$
+
+这时熟悉波动力学的读者可能已经看到，$\langle x'|\alpha\rangle$就是由$|\alpha\rangle$表示的物理态的波函数。在1.7节我们将更多地谈到把这种展开系数确定为波函数的x表象。
+
+位置本征右矢的概念可以扩充到三维。在非相对论量子力学中人们假定位置的本征右矢$|\mathbf{x}'\rangle$是完备的。因此，一个忽略了内部自由度（比如自旋）的粒子的态右矢可以用$\{|\mathbf{x}'\rangle\}$做如下展开：
+$$|\alpha\rangle=\int d^3x'|\mathbf{x}'\rangle\langle\mathbf{x}'|\alpha\rangle, \tag{1.6.9}$$
+其中$\mathbf{x}'$代表$x'$，$y'$和$z'$；换句话说，$|\mathbf{x}'\rangle$是可观测量x，y和z在1.4节意义上的共同本征右矢：
+$$|\mathbf{x}'\rangle\equiv|x',y',z'\rangle, \tag{1.6.10a}$$
+$$x|\mathbf{x}'\rangle=x'|\mathbf{x}'\rangle,\quad y|\mathbf{x}'\rangle=y'|\mathbf{x}'\rangle,\quad z|\mathbf{x}'\rangle=z'|\mathbf{x}'\rangle, \tag{1.6.10b}$$
+既然能够考虑这样的一个共同本征右矢，我们就隐含地假定了位置矢量的三个分量能在任意精度下同时测量。因此，我们一定有
+$$[x_i,x_j]=0, \tag{1.6.11}$$
+其中$x_1$，$x_2$和$x_3$分别表示x，y和z。
+
+## 平移
+现在我们引入非常重要的平移或空间位移的概念。假定开始时我们有一个准确地处于$\mathbf{x}'$周围的态。让我们考虑一种操作，它把这个态改变为另一个准确定位的态，这一次它位于$\mathbf{x}'+d\mathbf{x}'$周围，而其他的一切（例如自旋方向）都不变。这样一种操作被定义为无穷小平移$d\mathbf{x}'$，实现这种操作的算符用$\mathcal{J}(d\mathbf{x}')$表示，即
+$$\mathcal{J}(d\mathbf{x}')|\mathbf{x}'\rangle=|\mathbf{x}'+d\mathbf{x}'\rangle. \tag{1.6.12}$$
+其中按照约定，将一个可能的任意相因子设为1。注意，(1.6.12)式的右边仍是一个位置本征右矢，但是这一次，其本征值为$\mathbf{x}'+d\mathbf{x}'$。显然，$|\mathbf{x}'\rangle$不是无穷小平移算符的一个本征右矢。
+
+用位置本征右矢把一个任意态的右矢$|\alpha\rangle$展开，可以考查无穷小平移对于$|\alpha\rangle$的影响：
+$$|\alpha\rangle\to\mathcal{J}(d\mathbf{x}')|\alpha\rangle=\mathcal{J}(d\mathbf{x}')\int d^3x'|\mathbf{x}'\rangle\langle\mathbf{x}'|\alpha\rangle=\int d^3x'|\mathbf{x}'+d\mathbf{x}'\rangle\langle\mathbf{x}'|\alpha\rangle. \tag{1.6.13}$$
+我们还可以把(1.6.13)式的右边写成
+$$\int d^3x'|\mathbf{x}'+d\mathbf{x}'\rangle\langle\mathbf{x}'|\alpha\rangle=\int d^3x'|\mathbf{x}'\rangle\langle\mathbf{x}'-d\mathbf{x}'|\alpha\rangle \tag{1.6.14}$$
+因为积分是对全空间进行的，而$\mathbf{x}'$只是一个积分变量。这表明，平移态$\mathcal{J}(d\mathbf{x}')|\alpha\rangle$可以通过把$\langle\mathbf{x}'|\alpha\rangle$中的$\mathbf{x}'$替换成$\mathbf{x}'-d\mathbf{x}'$得到。
+
+在文献中有一种经常用来处理平移的等价方法。代替考虑物理系统本身的无穷小平移，我们考虑对于坐标系作这样一种变化，即坐标原点沿相反的方向移动$-d\mathbf{x}'$。从物理上讲，在这样一种替代做法中我们要问，对于其坐标系移动了$-d\mathbf{x}'$的另一位观察者，同一个态右矢看上去会是怎么样的。在本书中我们尽量不采用这种方法。显然，重要的是我们不要把这两种方法混在一起。
+
+现在，我们列出无穷小平移算符$\mathcal{J}(d\mathbf{x}')$的一些性质。我们要求的第一个性质是由概率守恒所强加的幺正性。如果右矢$|\alpha\rangle$归一为1，要求平移后的右矢$\mathcal{J}(d\mathbf{x}')|\alpha\rangle$也被归一为1是合理的，因此
+$$\langle\alpha|\alpha\rangle=\langle\alpha|\mathcal{J}^\dagger(d\mathbf{x}')\mathcal{J}(d\mathbf{x}')|\alpha\rangle, \tag{1.6.15}$$
+通过要求无穷小平移是幺正的
+$$\mathcal{J}^\dagger(d\mathbf{x}')\mathcal{J}(d\mathbf{x}')=1. \tag{1.6.16}$$
+这个条件可以得到保障。总的说来，在幺正变换下右矢的模保持不变。对于第二个性质，我们假定考虑两个相继的无穷小平移——首先平移$d\mathbf{x}'$，接着再平移$d\mathbf{x}''$，其中$d\mathbf{x}'$和$d\mathbf{x}''$不必沿同一个方向。我们预期最终的结果就是一个通过矢量之和$d\mathbf{x}'+d\mathbf{x}''$的单一的平移操作，于是我们要求
+$$\mathcal{J}(d\mathbf{x}'')\mathcal{J}(d\mathbf{x}')=\mathcal{J}(d\mathbf{x}'+d\mathbf{x}''). \tag{1.6.17}$$
+第三个性质是，假定考虑一个沿相反方向的平移，我们预期这个反方向的平移与原来平移的逆相同
+$$\mathcal{J}(-d\mathbf{x}')=\mathcal{J}^{-1}(d\mathbf{x}'). \tag{1.6.18}$$
+第四个性质要求，当$d\mathbf{x}'\to0$时，平移算符约化为恒等算符
+$$\lim_{d\mathbf{x}'\to0}\mathcal{J}(d\mathbf{x}')=1 \tag{1.6.19}$$
+并且$\mathcal{J}(d\mathbf{x}')$与单位算符之差是$d\mathbf{x}'$的一级小量。
+
+我们现在证明，如果把无穷小平移算符取为
+$$\mathcal{J}(d\mathbf{x}')=1-i\mathbf{K}\cdot d\mathbf{x}', \tag{1.6.20}$$
+其中K的分量$K_x$，$K_y$和$K_z$都是厄米算符，则上述所有的性质都能得到满足。第一个性质[即$\mathcal{J}(d\mathbf{x}')$的幺正性]的检验如下
+$$\begin{aligned}
+\mathcal{J}^\dagger(d\mathbf{x}')\mathcal{J}(d\mathbf{x}')&=(1+i\mathbf{K}^\dagger\cdot d\mathbf{x}')(1-i\mathbf{K}\cdot d\mathbf{x}') \\
+&=1-i(\mathbf{K}-\mathbf{K}^\dagger)\cdot d\mathbf{x}'+0[(d\mathbf{x}')^2] \\
+&\simeq1,
+\end{aligned} \tag{1.6.21}$$
+其中对于无穷小变换，我们忽略了$d\mathbf{x}'$的二级项。第二个性质(1.6.17)式也可以证明如下
+$$\begin{aligned}
+\mathcal{J}(d\mathbf{x}'')\mathcal{J}(d\mathbf{x}')&=(1-i\mathbf{K}\cdot d\mathbf{x}'')(1-i\mathbf{K}\cdot d\mathbf{x}') \\
+&\simeq1-i\mathbf{K}\cdot(d\mathbf{x}'+d\mathbf{x}'') \\
+&=\mathcal{J}(d\mathbf{x}'+d\mathbf{x}'').
+\end{aligned} \tag{1.6.22}$$
+第三个和第四个性质显然为(1.6.20)式所满足。
+
+若认为(1.6.20)式为$\mathcal{J}(d\mathbf{x}')$的正确形式，我们就能推导出一个算符K与算符x之间的非常基本的关系。首先注意到
+$$\mathbf{x}\mathcal{J}(d\mathbf{x}')|\mathbf{x}'\rangle=\mathbf{x}|\mathbf{x}'+d\mathbf{x}'\rangle=(\mathbf{x}'+d\mathbf{x}')|\mathbf{x}'+d\mathbf{x}'\rangle \tag{1.6.23a}$$
+和
+$$\mathcal{J}(d\mathbf{x}')\mathbf{x}|\mathbf{x}'\rangle=\mathbf{x}'\mathcal{J}(d\mathbf{x}')|\mathbf{x}'\rangle=\mathbf{x}'|\mathbf{x}'+d\mathbf{x}'\rangle; \tag{1.6.23b}$$
+因此，
+$$[\mathbf{x},\mathcal{J}(d\mathbf{x}')]|\mathbf{x}'\rangle=d\mathbf{x}'|\mathbf{x}'+d\mathbf{x}'\rangle\simeq d\mathbf{x}'|\mathbf{x}'\rangle, \tag{1.6.24}$$
+在(1.6.24)式最后一步的近似中产生的误差是$d\mathbf{x}'$的二级小量。这里，$|\mathbf{x}'\rangle$可以是任意的位置本征右矢，并且知道位置本征右矢形成了一个完备集。因此我们一定有一个算符恒等式
+$$[\mathbf{x},\mathcal{J}(d\mathbf{x}')]=d\mathbf{x}', \tag{1.6.25}$$
+或
+$$-i\mathbf{x}\mathbf{K}\cdot d\mathbf{x}'+i\mathbf{K}\cdot d\mathbf{x}'\mathbf{x}=d\mathbf{x}', \tag{1.6.26}$$
+，其中，在(1.6.25)式和(1.6.26)式的右边，$d\mathbf{x}'$被认为是一个数$d\mathbf{x}'$乘以一个由$\{|\mathbf{x}'\rangle\}$所张的右矢空间中的单位算符。取$d\mathbf{x}'$沿$\hat{\mathbf{x}}_i$方向并且取它与$\hat{\mathbf{x}}_i$的标量积，我们得到
+$$[x_i,K_j]=i\delta_{ij}, \tag{1.6.27}$$
+其中，$\delta_{ij}$再次被认为是乘上一个单位算符。
+
+## 动量作为一个平移生成元
+方程(1.6.27)式是位置算符x，y，z和K算符$K_x$，$K_y$，$K_z$之间的基本对易关系。记住，到此为止，K算符是借助无穷小平移算符通过(1.6.20)式定义的。我们可以赋予K什么样的物理意义呢？
+
+施温格讲授量子力学时曾经谈到："……对于一些基本性质，我们将仅仅从经典物理中借用一些名字。"在目前的情况中，我们希望从经典力学借用如下概念：动量是一个无穷小平移的生成元。经典力学中的一个无穷小平移可以看作是一个正则变换
+$$\mathbf{x}_{\text{新}}\equiv\mathbf{X}=\mathbf{x}+d\mathbf{x},\quad \mathbf{p}_{\text{新}}\equiv\mathbf{P}=\mathbf{p}. \tag{1.6.28}$$
+它可以从生成函数（Goldstein 2002，386页和403页）
+$$F(\mathbf{x},\mathbf{P})=\mathbf{x}\cdot\mathbf{P}+\mathbf{p}\cdot d\mathbf{x} \tag{1.6.29}$$
+求得，其中p和P涉及相应的动量。
+
+这个方程与量子力学中的无穷小平移算符(1.6.20)式有着惊人的相似性，特别是如果我们回想(1.6.29)式中的$\mathbf{x}\cdot\mathbf{P}$是恒等变换（$\mathbf{X}=\mathbf{x}$，$\mathbf{P}=\mathbf{p}$）的生成函数。由此导致我们猜测算符K在某种意义上与量子力学中的动量算符有关。
+
+可以把算符K视为与动量算符本身等同吗？不幸的是，量纲完全不对，算符K具有1/(长度)的量纲，因为$\mathbf{K}\cdot d\mathbf{x}'$必须是无量纲的。但是令
+$$\mathbf{K}=\frac{\mathbf{p}}{\text{量纲为作用量的普适常数}} \tag{1.6.30}$$
+似乎是合法的。没有任何办法从量子力学的基本假设确定这个普适常数的实际数值。相反，这个常数在这里是需要的，因为从历史上看，在量子力学之前，经典物理学是使用如：地球的周长、1cc（译者注：1立方厘米）水的质量、平均太阳日的持续时间，等等，这些便于描写宏观量的单位发展起来的。倘若微观物理学是在宏观物理学之前就已被明确地阐述了的话，则物理学家们几乎肯定会以这样一种方式选择基本单位，它使(1.6.30)式中的普适常数为1。
+
+在这里，来自静电学的一种类比可能会有些帮助。两个电荷为e、距离为r的粒子之间的相互作用正比于$e^2/r$。若取非合理高斯单位，则比例因子恰好为1；但是若取对电机工程师更方便的合理mks单位，则比例因子是$1/4\pi\epsilon_0$（见附录A）。
+
+(1.6.30)式中出现的普适常数结果与在1924年写下的德布罗意关系
+$$\frac{2\pi}{\lambda}=\frac{p}{\hbar}, \tag{1.6.31}$$
+中出现的常数$\hbar$是相同的，式中的$\lambda$是一个"粒子波"的波长。换句话说，算符K是与波数（$2\pi$乘以波长的倒数，通常用k表示）相对应的量子力学算符。采用这种规定，无穷小平移算符$\mathcal{J}(d\mathbf{x}')$可写为
+$$\mathcal{J}(d\mathbf{x}')=1-i\mathbf{p}\cdot d\mathbf{x}'/\hbar, \tag{1.6.32}$$
+其中的p是动量算符。对易关系(1.6.27)式现在变成
+$$[x_i,p_j]=i\hbar\delta_{ij}. \tag{1.6.33}$$
+
+对易关系(1.6.33)式意味着，例如，x和$p_x$（而不是x和$p_y$）是不相容的可观测量。因此不可能找到x和$p_x$的共同本征右矢。1.4节的普遍形式可以用在这里，求得海森伯的位置与动量的不确定度关系
+$$\langle(\Delta x)^2\rangle\langle(\Delta p_x)^2\rangle\geqslant\hbar^2/4. \tag{1.6.34}$$
+(1.6.34)式的一些应用将在1.7节见到。
+
+到此为止，我们仅限于无穷小平移。一个有限的平移（即一个有限大小的空间平行移动）可以通过相继地组合无穷小平移得到。让我们考虑沿x方向平移一段$\Delta x'$距离的有限平移：
+$$\mathcal{J}(\Delta x'\hat{\mathbf{x}})|\mathbf{x}'\rangle=|\mathbf{x}'+\Delta x'\hat{\mathbf{x}}\rangle. \tag{1.6.35}$$
+通过组合N次无穷小平移，其中的每一次都由一个沿x方向的空间平移$\Delta x'/N$所表征，并且令$N\to\infty$，我们得到
+$$\begin{aligned}
+\mathcal{J}(\Delta x'\hat{\mathbf{x}})&=\lim_{N\to\infty}\left(1-\frac{ip_x\Delta x'}{N\hbar}\right)^N \\
+&=\exp\left(-\frac{ip_x\Delta x'}{\hbar}\right).
+\end{aligned} \tag{1.6.36}$$
+这里的$\exp(-ip_x\Delta x'/\hbar)$被认为是算符$p_x$的一个函数；一般而言，对于任何算符X我们都有：
+$$\exp(X)\equiv1+X+\frac{X^2}{2!}+\cdots. \tag{1.6.37}$$
+
+平移的一个基本性质是沿不同方向的相继平移，比如沿x方向和y方向的平移，是对易的。在图1.9中我们可以清晰地看到这一点，在从A移动到B时，与我们经由C还是经由D是没有关系的。从数学上看，
+$$\mathcal{J}(\Delta y'\hat{\mathbf{y}})\mathcal{J}(\Delta x'\hat{\mathbf{x}})=\mathcal{J}(\Delta x'\hat{\mathbf{x}}+\Delta y'\hat{\mathbf{y}}),$$
+$$\mathcal{J}(\Delta x'\hat{\mathbf{x}})\mathcal{J}(\Delta y'\hat{\mathbf{y}})=\mathcal{J}(\Delta x'\hat{\mathbf{x}}+\Delta y'\hat{\mathbf{y}}). \tag{1.6.38}$$
+这一点并不像它可能从表面上看的那么平庸，第3章我们将证明，绕不同轴的转动不对易。对于$\Delta x'$和$\Delta y'$做展开保留到第二阶，我们得到
+$$\begin{aligned}
+[\mathcal{J}(\Delta y'\hat{\mathbf{y}}),\mathcal{J}(\Delta x'\hat{\mathbf{x}})]&=\left[\left(1-\frac{ip_y\Delta y'}{\hbar}-\frac{p_y^2(\Delta y')^2}{2\hbar^2}+\cdots\right),\right. \\
+&\quad\left.\left(1-\frac{ip_x\Delta x'}{\hbar}-\frac{p_x^2(\Delta x')^2}{2\hbar^2}+\cdots\right)\right] \\
+&\simeq-\frac{(\Delta x')(\Delta y')}{\hbar^2}[p_y,p_x].
+\end{aligned} \tag{1.6.39}$$
+由于$\Delta x'$和$\Delta y'$都是任意的，按(1.6.38)式的要求，或
+$$[\mathcal{J}(\Delta y'\hat{\mathbf{y}}),\mathcal{J}(\Delta x'\hat{\mathbf{x}})]=0, \tag{1.6.40}$$
+立即导致
+$$[p_x,p_y]=0, \tag{1.6.41}$$
+或更普遍地，
+$$[p_i,p_j]=0. \tag{1.6.42}$$
+这个对易关系是沿不同方向平移相互对易的直接后果。在任何情况下平移的生成元都互相对易，相应的群被称为是阿贝尔（Abel）群。三维平移群是阿贝尔群。
+
+方程(1.6.42)式意味着$p_x$，$p_y$和$p_z$是彼此相容的可观测量。因此，我们可以构想一个$p_x$，$p_y$和$p_z$的共同本征右矢，即
+$$|\mathbf{p}'\rangle\equiv|p_x',p_y',p_z'\rangle, \tag{1.6.43a}$$
+$$p_x|\mathbf{p}'\rangle=p_x'|\mathbf{p}'\rangle,\quad p_y|\mathbf{p}'\rangle=p_y'|\mathbf{p}'\rangle,\quad p_z|\mathbf{p}'\rangle=p_z'|\mathbf{p}'\rangle. \tag{1.6.43b}$$
+求出$\mathcal{J}(d\mathbf{x}')$在这样一个动量本征右矢上的效应是有意义的
+$$\mathcal{J}(d\mathbf{x}')|\mathbf{p}'\rangle=\left(1-\frac{i\mathbf{p}\cdot d\mathbf{x}'}{\hbar}\right)|\mathbf{p}'\rangle=\left(1-\frac{i\mathbf{p}'\cdot d\mathbf{x}'}{\hbar}\right)|\mathbf{p}'\rangle. \tag{1.6.44}$$
+
+我们看到尽管遇到了一个微小的位相变化，这个动量的本征右矢仍保持不变，所以，与$|\mathbf{x}'\rangle$不同，$|\mathbf{p}'\rangle$是$\mathcal{J}(d\mathbf{x}')$的一个本征右矢，这一点我们已经预料到了，因为
+$$[\mathbf{p},\mathcal{J}(d\mathbf{x}')]=0. \tag{1.6.45}$$
+然而，要注意，$\mathcal{J}(d\mathbf{x}')$的本征值是复数；在这里，我们不可能期待一个实的本征值，因为尽管$\mathcal{J}(d\mathbf{x}')$是幺正的，但却不是厄米的。
+
+## 正则对易关系
+我们总结一下通过研究平移的性质导出的对易关系：
+$$[x_i,x_j]=0,\quad [p_i,p_j]=0,\quad [x_i,p_j]=i\hbar\delta_{ij}. \tag{1.6.46}$$
+这些关系构成了量子力学的基石。在狄拉克的书中，他把它们称之为"基本的量子条件"。通常，它们以正则对易关系或基本对易关系闻名于世。
+
+历史上，是W.海森伯于1925年证明，如果把一些遵从一定乘法规则的数组与相应的频率联系在一起，则当时已知的一些原子的跃迁谱线组合规则就能够得到最佳解释。紧随其后，玻恩和约当（P.Jordan）指出海森伯的乘法规则实际上就是矩阵代数的乘法规则，于是基于(1.6.46)式与矩阵类似的理论发展了起来，它现在被称为矩阵力学。
+
+还是在1925年，狄拉克注意到只要把经典的泊松（Poisson）括号用对易关系作如下的替换，则各种量子力学关系都可以从相应的经典关系得到：
+$$[,]_{\text{经典}}\to\frac{[,]}{i\hbar}, \tag{1.6.47}$$
+在那里我们可以回想，作为q和p的函数，经典泊松括号被定义为
+$$[A(q,p),B(q,p)]_{\text{经典}}\equiv\sum_s\left(\frac{\partial A}{\partial q_s}\frac{\partial B}{\partial p_s}-\frac{\partial A}{\partial p_s}\frac{\partial B}{\partial q_s}\right). \tag{1.6.48}$$
+例如，在经典力学中我们有
+$$[x_i,p_j]_{\text{经典}}=\delta_{ij}, \tag{1.6.49}$$
+在量子力学中它变成了(1.6.33)式。
+
+狄拉克规则(1.6.47)式似乎很合理，因为经典泊松括号和量子力学对易关系满足类似的代数性质。特别地，不管[,]被理解为经典的泊松括号还是量子力学的对易关系，都可以证明下列的关系式：
+$$[A,A]=0 \tag{1.6.50a}$$
+$$[A,B]=-[B,A] \tag{1.6.50b}$$
+$$[A,c]=0\quad(c\text{只是一个数}) \tag{1.6.50c}$$
+$$[A+B,C]=[A,C]+[B,C] \tag{1.6.50d}$$
+$$[A,BC]=[A,B]C+B[A,C] \tag{1.6.50e}$$
+$$[A,[B,C]]+[B,[C,A]]+[C,[A,B]]=0, \tag{1.6.50f}$$
+其中，最后一个关系式称为雅可比（Jacobi）恒等式。**然而，存在着一些重要的差别。**首先，经典泊松括号的量纲不同于量子力学对易关系的量纲，因为在(1.6.48)式中出现了对q和p的微商。其次，q和p的实函数的泊松括号是纯实的，而两个厄米算符的对易关系是反厄米的（请看1.4节的引理3）。考虑到这些差别，在(1.6.47)式中插入了因子$i\hbar$
+
+我们有意回避了探讨在获取正则对易关系时狄拉克的类比。我们通向对易关系的方法仅仅基于（1）平移的性质和（2）把平移的生成元认定为动量算符模数，一个带有作用量量纲的普适常数。我们相信这一方法更强有力，因为它可以推广到没有经典类比的可观测量情况。例如，我们在1.4节所遇到的自旋角动量分量与经典力学的p和q毫不相干。但正如我们将在第3章中证明的，自旋角动量分量的对易关系可以使用转动性质推导出来，就像我们使用平移性质推导出正则对易关系一样。 # 1.7 位置和动量空间中的波函数 ## 位置空间波函数 在这一节将对位置与动量空间波函数性质进行系统研究。为了简单起见，让我们回到一维情况。使用的基右矢是位置右矢，它满足 $$x|x'\rangle=x'|x'\rangle, \tag{1.7.1}$$ 它以这样的一种方式归一化，即使正交条件表示为 $$\langle x''|x'\rangle=\delta(x''-x'). \tag{1.7.2}$$ 我们已经指出过，代表一个物理态的右矢可以用$|x'\rangle$展开 $$|\alpha\rangle=\int dx'|x'\rangle\langle x'|\alpha\rangle, \tag{1.7.3}$$ 而展开系数$\langle x'|\alpha\rangle$以这样的一种方式解释，即 $$|\langle x'|\alpha\rangle|^2dx' \tag{1.7.4}$$ 是在$x'$附近一个狭窄间隔$dx'$内找到粒子的概率。在我们的形式中，内积$\langle x'|\alpha\rangle$就是通常所说的$|\alpha\rangle$态的波函数$\psi_\alpha(x')$ $$\langle x'|\alpha\rangle=\psi_\alpha(x'). \tag{1.7.5}$$ 在初等波动力学中展开系数$c_{a'}(=\langle a'|\alpha\rangle)$以及波函数$\psi_\alpha(x')(=\langle x'|\alpha\rangle)$的概率解释经常作为各自独立的假定给出的。我们的形式来源于狄拉克，它的主要优点之一是，这两类概率解释是统一的，与$c_{a'}$基本一样，$\psi_\alpha(x')$也是一个展开系数[见(1.7.3)式]。沿着狄拉克的足迹，我们得以欣赏量子力学的统一。 考虑内积$\langle\beta|\alpha\rangle$。利用$|x'\rangle$的完备性，我们有 $$\begin{aligned} \langle\beta|\alpha\rangle&=\int dx'\langle\beta|x'\rangle\langle x'|\alpha\rangle \\ &=\int dx'\psi_\beta^*(x')\psi_\alpha(x'), \end{aligned} \tag{1.7.6}$$ 所以$\langle\beta|\alpha\rangle$表征两个波函数之间的重叠度。注意，我们并不是把$\langle\beta|\alpha\rangle$定义为重叠积分，确认$\langle\beta|\alpha\rangle$为重叠积分是由我们对$|x'\rangle$的完备性假定推知的。$\langle\beta|\alpha\rangle$更为一般的、不依赖于表象的解释是，它表示在$|\beta\rangle$态中找到$|\alpha\rangle$态的概率振幅。 这一次让我们用波函数语言解释展开式 $$|\alpha\rangle=\sum_{a'}|a'\rangle\langle a'|\alpha\rangle \tag{1.7.7}$$ 我们就用位置本征右矢$\langle x'|$左乘(1.7.7)式的两边。这样 $$\langle x'|\alpha\rangle=\sum_{a'}\langle x'|a'\rangle\langle a'|\alpha\rangle. \tag{1.7.8}$$ 用通常的波动力学符号，可以看出该式为 $$\psi_\alpha(x')=\sum_{a'}c_{a'}u_{a'}(x'),$$ 在那里我们引入了本征值为$a'$的算符A的本征函数： $$u_{a'}(x')=\langle x'|a'\rangle. \tag{1.7.9}$$ 现在让我们研究怎么使用$|\alpha\rangle$和$|\beta\rangle$的波函数写出$\langle\beta|A|\alpha\rangle$。显然，我们有 $$\begin{aligned} \langle\beta|A|\alpha\rangle&=\int dx'\int dx''\langle\beta|x'\rangle\langle x'|A|x''\rangle\langle x''|\alpha\rangle \\ &=\int dx'\int dx''\psi_\beta^*(x')\langle x'|A|x''\rangle\psi_\alpha(x''). \end{aligned} \tag{1.7.10}$$ 因此，为了能够求出$\langle\beta|A|\alpha\rangle$，我们必须知道矩阵元$\langle x'|A|x''\rangle$，一般来说，它是$x'$和$x''$两个变量的函数。 如果可观测量A是位置算符x的函数就会出现极大的简化。特别是，考虑 $$A=x^2, \tag{1.7.11}$$ 它实际出现于第2章将要讨论的简谐振子问题的哈密顿量中。我们有 $$\langle x'|x^2|x''\rangle=(\langle x'|)\cdot(x''^2|x''\rangle)=x'^2\delta(x'-x''), \tag{1.7.12}$$ 其中我们用到了(1.7.1)式和(1.7.2)式。双重积分(1.7.10)式现在约化为一个单重积分： $$\begin{aligned} \langle\beta|x^2|\alpha\rangle&=\int dx'\langle\beta|x'\rangle x'^2\langle x'|\alpha\rangle \\ &=\int dx'\psi_\beta^*(x')x'^2\psi_\alpha(x'). \end{aligned} \tag{1.7.13}$$ 一般地说， $$\langle\beta|f(x)|\alpha\rangle=\int dx'\psi_\beta^*(x')f(x')\psi_\alpha(x'). \tag{1.7.14}$$ 注意，(1.7.14)式左边的$f(x)$是一个算符，而右边的$f(x')$不是算符。 ## 位置基中的动量算符 现在我们研究在位置基中，即在位置本征右矢作为基矢的表象中，动量算符看起来是什么样的。我们的出发点是动量作为无穷小平移生成元的定义 $$\begin{aligned} \left(1-\frac{ip\Delta x'}{\hbar}\right)|\alpha\rangle&=\int dx'\mathcal{J}(\Delta x')|x'\rangle\langle x'|\alpha\rangle \\ &=\int dx'|x'+\Delta x'\rangle\langle x'|\alpha\rangle \\ &=\int dx'|x'\rangle\langle x'-\Delta x'|\alpha\rangle \\ &=\int dx'|x'\rangle\left(\langle x'|\alpha\rangle-\Delta x'\frac{\partial}{\partial x'}\langle x'|\alpha\rangle\right), \end{aligned} \tag{1.7.15}$$ 比较两边得到 $$p|\alpha\rangle=\int dx'|x'\rangle\left(-i\hbar\frac{\partial}{\partial x'}\langle x'|\alpha\rangle\right) \tag{1.7.16}$$ 或 $$\langle x'|p|\alpha\rangle=-i\hbar\frac{\partial}{\partial x'}\langle x'|\alpha\rangle \tag{1.7.17}$$ 在那里我们用到了正交性质(1.7.2)式。对x表象中的p矩阵元，我们得到 $$\langle x'|p|x''\rangle=-i\hbar\frac{\partial}{\partial x'}\delta(x'-x''). \tag{1.7.18}$$ 从(1.7.16)我们得到一个非常重要的恒等式： $$\begin{aligned} \langle\beta|p|\alpha\rangle&=\int dx'\langle\beta|x'\rangle\left(-i\hbar\frac{\partial}{\partial x'}\langle x'|\alpha\rangle\right) \\ &=\int dx'\psi_\beta^*(x')\left(-i\hbar\frac{\partial}{\partial x'}\right)\psi_\alpha(x'). \end{aligned} \tag{1.7.19}$$ 在我们的形式中，(1.7.19)式不是一个假定，在一定程度上，它是利用动量的基本性质推导出来的。重复应用(1.7.17)式，我们还可以求得 $$\langle x'|p^n|\alpha\rangle=(-i\hbar)^n\frac{\partial^n}{\partial x'^n}\langle x'|\alpha\rangle. \tag{1.7.20}$$ $$\langle\beta|p^n|\alpha\rangle=\int dx'\psi_\beta^*(x')(-i\hbar)^n\frac{\partial^n}{\partial x'^n}\psi_\alpha(x'). \tag{1.7.21}$$ ## 动量空间波函数 到目前为止，我们所做的都只是在x基中进行的。但在x和p之间（除了偶然的负号之外）实际上存在着完全的对称性，我们可以从正则对易关系推知这一点。现在我们改用p基，即在动量表象进行处理。 为了简单，我们仍取一维空间。在p基中的基本征右矢规定 $$p|p'\rangle=p'|p'\rangle \tag{1.7.22}$$ 以及 $$\langle p'|p''\rangle=\delta(p'-p''). \tag{1.7.23}$$ 动量的本征右矢$\{|p'\rangle\}$以和位置空间本征右矢$\{|x'\rangle\}$大体相同的方式张成右矢空间。于是，一个任意的态矢量$|\alpha\rangle$可展开如下 $$|\alpha\rangle=\int dp'|p'\rangle\langle p'|\alpha\rangle. \tag{1.7.24}$$ 对于展开系数$\langle p'|\alpha\rangle$我们可以给出一种概率解释，测量p给出的本征值$p'$处于一个狭窄间隔$dp'$内的概率为$|\langle p'|\alpha\rangle|^2dp'$。按照惯例，称$\langle p'|\alpha\rangle$为动量空间波函数，通常采用符号$\phi_\alpha(p')$： $$\langle p'|\alpha\rangle=\phi_\alpha(p'). \tag{1.7.25}$$ 如果$|\alpha\rangle$已被归一化了，则我们得到 $$\int dp'\langle\alpha|p'\rangle\langle p'|\alpha\rangle=\int dp'|\phi_\alpha(p')|^2=1. \tag{1.7.26}$$ 现在让我们建立x表象与p表象之间的联系。我们回忆一下，在分立谱的情况下，从老的基$\{|a'\rangle\}$到新的基$\{|b'\rangle\}$的基的改变是用变换矩阵(1.5.7)式表征的。同样地，我们预期，欲求的信息包含在$\langle x'|p'\rangle$中，它是$x'$和$p'$的函数，通常称之为从x表象到p表象的变换函数。为了推导出$\langle x'|p'\rangle$的显示表达式，首先回忆一下(1.7.17)式，令$|\alpha\rangle$为动量本征右矢$|p'\rangle$，我们得到 $$\langle x'|p|p'\rangle=-i\hbar\frac{\partial}{\partial x'}\langle x'|p'\rangle \tag{1.7.27}$$ 或 $$p'\langle x'|p'\rangle=-i\hbar\frac{\partial}{\partial x'}\langle x'|p'\rangle. \tag{1.7.28}$$ $\langle x'|p'\rangle$的这个微分方程的解是 $$\langle x'|p'\rangle=N\exp\left(\frac{ip'x'}{\hbar}\right), \tag{1.7.29}$$ 其中N是马上就要确定的归一化常数。尽管变换函数$\langle x'|p'\rangle$是两个变量$x'$和$p'$的函数，我们可以暂时把它看作是$p'$取固定值时的$x'$的函数。那么，它可以看作是在位置$x'$处找到由$p'$确定的动量本征态的概率振幅；换句话说，它就是动量本征态$|p'\rangle$的波函数，通常称之为动量本征函数（仍在x空间）。所以，(1.7.29)式只不过是说一个动量本征态是一个平面波。有趣的是，我们在没有求解薛定谔方程（它还没有被写出来）的情况下就已经得到了这个平面波解。 为了得到归一常数N，让我们首先考虑 $$\langle x'|x''\rangle=\int dp'\langle x'|p'\rangle\langle p'|x''\rangle. \tag{1.7.30}$$ 左边正是$\delta(x'-x'')$；右边可以利用$\langle x'|p'\rangle$的显示表示式计算出来 $$\begin{aligned} \delta(x'-x'')&=|N|^2\int dp'\exp\left[\frac{ip'(x'-x'')}{\hbar}\right] \\ &=2\pi\hbar|N|^2\delta(x'-x''). \end{aligned} \tag{1.7.31}$$ 按照惯例，选N为纯实数且取正值，最后我们得到 $$\langle x'|p'\rangle=\frac{1}{\sqrt{2\pi\hbar}}\exp\left(\frac{ip'x'}{\hbar}\right). \tag{1.7.32}$$ 现在来论证坐标空间波函数与动量空间波函数是如何联系起来的。我们所要做的就是把 $$\langle x'|\alpha\rangle=\int dp'\langle x'|p'\rangle\langle p'|\alpha\rangle \tag{1.7.33a}$$ 和 $$\langle p'|\alpha\rangle=\int dx'\langle p'|x'\rangle\langle x'|\alpha\rangle \tag{1.7.33b}$$ 改写成 $$\psi_\alpha(x')=\left[\frac{1}{\sqrt{2\pi\hbar}}\right]\int dp'\exp\left(\frac{ip'x'}{\hbar}\right)\phi_\alpha(p') \tag{1.7.34a}$$ 和 $$\phi_\alpha(p')=\left[\frac{1}{\sqrt{2\pi\hbar}}\right]\int dx'\exp\left(\frac{-ip'x'}{\hbar}\right)\psi_\alpha(x'). \tag{1.7.34b}$$ 这一对方程式恰恰是人们从傅里叶（Fourier）反演定理预期的结果。显然，我们所发展的数学莫名其妙地"知道"了傅里叶的积分变换工作。 ## 高斯型波包 通过观察一个物理实例来阐述我们的基本形式是有益的。我们考虑一个所谓的高斯型波包，它的x空间波函数由下式给定 $$\langle x'|\alpha\rangle=\left[\frac{1}{\pi^{1/4}\sqrt{d}}\right]\exp\left[ikx'-\frac{x'^2}{2d^2}\right]. \tag{1.7.35}$$ 这是一个被中心位于原点的高斯型轮廓线调制的、波数为k的平面波。对于$|x'|>d$，观测到这个粒子的概率迅速地变为零；更定量地讲，概率密度$|\langle x'|\alpha\rangle|^2$具有宽度为d的高斯型形状。 我们现在计算$x$，$x^2$，$p$和$p^2$的期待值。根据对称性，x的期待值显然是零： $$\langle x\rangle=\int_{-\infty}^{\infty}dx'\langle\alpha|x'\rangle x'\langle x'|\alpha\rangle=\int_{-\infty}^{\infty}dx'|\langle x'|\alpha\rangle|^2x'=0. \tag{1.7.36}$$ 对于$x^2$我们求得 $$\begin{aligned} \langle x^2\rangle&=\int_{-\infty}^{\infty}dx'x'^2|\langle x'|\alpha\rangle|^2 \\ &=\left(\frac{1}{\sqrt{\pi}d}\right)\int_{-\infty}^{\infty}dx'x'^2\exp\left[\frac{-x'^2}{d^2}\right] \\ &=\frac{d^2}{2}. \end{aligned} \tag{1.7.37}$$ 它导致位置算符的弥散度为 $$\langle(\Delta x)^2\rangle=\langle x^2\rangle-\langle x\rangle^2=\frac{d^2}{2} \tag{1.7.38}$$ p和$p^2$的期待值也可以计算如下 $$\langle p\rangle=\hbar k \tag{1.7.39a}$$ $$\langle p^2\rangle=\frac{\hbar^2}{2d^2}+\hbar^2k^2, \tag{1.7.39b}$$ 我们把它留作一个练习。因此，动量的弥散度由下式给出 $$\langle(\Delta p)^2\rangle=\langle p^2\rangle-\langle p\rangle^2=\frac{\hbar^2}{2d^2} \tag{1.7.40}$$ 有了(1.7.38)式和(1.7.40)式，我们可以检验海森伯的不确定度关系(1.6.34)式；在这种情况下，不确定度乘积由下式给出 $$\langle(\Delta x)^2\rangle\langle(\Delta p)^2\rangle=\frac{\hbar^2}{4}, \tag{1.7.41}$$ 它不依赖于d，因此对于一个高斯型波包，我们实际上有一个等式的关系式而不是更为普遍的不等式关系式(1.6.34)式。由于这个缘故，一个高斯型波包经常被称为最小不确定度波包。 我们现在转向动量空间。通过直接的积分，只要把指数部分配成平方，我们求得 $$\begin{aligned} \langle p'|\alpha\rangle&=\left(\frac{1}{\sqrt{2\pi\hbar}}\right)\left(\frac{1}{\pi^{1/4}\sqrt{d}}\right)\int_{-\infty}^{\infty}dx'\exp\left(\frac{-ip'x'}{\hbar}+ikx'-\frac{x'^2}{2d^2}\right) \\ &=\sqrt{\frac{d}{\hbar\sqrt{\pi}}}\exp\left[\frac{-(p'-\hbar k)^2d^2}{2\hbar^2}\right]. \end{aligned} \tag{1.7.42}$$ 这个动量空间波函数提供了获得$\langle p\rangle$和$\langle p^2\rangle$的替代方法，它也被留作一个练习。 找到动量为$p'$的粒子的概率也是高斯型的（在动量空间），其中心位于$\hbar k$，就像在$x'$点找到该粒子的概率是高斯型的（在位置空间），其中心位于零点一样。而且，两个高斯型的宽度彼此成反比，这是用另一种方式表述用(1.7.41)式明显计算出来的不确定度乘积$\langle(\Delta x)^2\rangle\langle(\Delta p)^2\rangle$的恒定性。在p空间的弥散得越宽，在x空间就弥散得越窄，反之亦然。 作为一个极端的例子，假设我们令$d\to\infty$。那么，位置空间波函数(1.7.35)式就变成了一个扩展到全空间的平面波，找到粒子的概率正好是个常数，不依赖于$x'$。相比之下，动量空间的波函数是个类δ函数，在$\hbar k$处有一个尖锐的峰。在相反的极端情况下，通过令$d\to0$，我们得到一个类δ函数的定域位置空间波函数，但动量空间波函数(1.7.42)式只是一个常数，不依赖于$p'$。 我们已经看到，一个极好的定域（在x空间）态可以看作是具有所有可能动量值的动量本征态的叠加。甚至那些动量与$mc$可比或更大的动量本征态也必须被包括在叠加中。然而，在这样高动量值的情况下，基于非相对论量子力学的描述肯定不再适用*。尽管有这种局限，在位置本征右矢$|x'\rangle$存在的基础上建立的我们的形式有着广泛的应用空间。 ## 推广到三维 至此，为简单起见，在这一节中我们的工作都只是在一维空间进行的，但是只要做一些必要的改变，我们所做的一切都可以推广到三维空间。所用的基右矢既可以取满足 $$\mathbf{x}|\mathbf{x}'\rangle=\mathbf{x}'|\mathbf{x}'\rangle \tag{1.7.43}$$ 的位置本征右矢，也可以取满足 $$\mathbf{p}|\mathbf{p}'\rangle=\mathbf{p}'|\mathbf{p}'\rangle \tag{1.7.44}$$ 的动量本征右矢。它们遵从归一化条件 $$\langle\mathbf{x}'|\mathbf{x}''\rangle=\delta^3(\mathbf{x}'-\mathbf{x}'') \tag{1.7.45a}$$ 和 $$\langle\mathbf{p}'|\mathbf{p}''\rangle=\delta^3(\mathbf{p}'-\mathbf{p}''), \tag{1.7.45b}$$ 其中的$\delta^3$代表三维δ函数 $$\delta^3(\mathbf{x}'-\mathbf{x}'')=\delta(x'-x'')\delta(y'-y'')\delta(z'-z''). \tag{1.7.46}$$ 完备性关系为 $$\int d^3x'|\mathbf{x}'\rangle\langle\mathbf{x}'|=1 \tag{1.7.47a}$$ 和 $$\int d^3p'|\mathbf{p}'\rangle\langle\mathbf{p}'|=1, \tag{1.7.47b}$$ 它们可以用来展开一个任意的态右矢 $$|\alpha\rangle=\int d^3x'|\mathbf{x}'\rangle\langle\mathbf{x}'|\alpha\rangle, \tag{1.7.48a}$$ $$|\alpha\rangle=\int d^3p'|\mathbf{p}'\rangle\langle\mathbf{p}'|\alpha\rangle. \tag{1.7.48b}$$ 展开系数$\langle\mathbf{x}'|\alpha\rangle$和$\langle\mathbf{p}'|\alpha\rangle$被分别视为位置空间的波函数$\psi_\alpha(\mathbf{x}')$和动量空间的波函数$\phi_\alpha(\mathbf{p}')$。 把动量算符置于$|\beta\rangle$和$|\alpha\rangle$之间时，动量算符变成 $$\langle\beta|\mathbf{p}|\alpha\rangle=\int d^3x'\psi_\beta^*(\mathbf{x}')(-i\hbar\nabla')\psi_\alpha(\mathbf{x}'). \tag{1.7.49}$$ 类似于(1.7.32)式的变换函数是 $$\langle\mathbf{x}'|\mathbf{p}'\rangle=\left[\frac{1}{(2\pi\hbar)^{3/2}}\right]\exp\left(\frac{i\mathbf{p}'\cdot\mathbf{x}'}{\hbar}\right), \tag{1.7.50}$$ 所以有 $$\psi_\alpha(\mathbf{x}')=\left[\frac{1}{(2\pi\hbar)^{3/2}}\right]\int d^3p'\exp\left(\frac{i\mathbf{p}'\cdot\mathbf{x}'}{\hbar}\right)\phi_\alpha(\mathbf{p}') \tag{1.7.51a}$$ 和 $$\phi_\alpha(\mathbf{p}')=\left[\frac{1}{(2\pi\hbar)^{3/2}}\right]\int d^3x'\exp\left(\frac{-i\mathbf{p}'\cdot\mathbf{x}'}{\hbar}\right)\psi_\alpha(\mathbf{x}'). \tag{1.7.51b}$$ 核对一下波函数的量纲是有意思的。在一维问题中，归一化条件(1.6.8)式意味着$|\langle x'|\alpha\rangle|^2$具有长度倒数的量纲，因此，波函数本身必须有（长度）$^{-1/2}$的量纲。与之相比，三维问题中的波函数一定有（长度）$^{-3/2}$的量纲，因为$|\langle\mathbf{x}'|\alpha\rangle|^2$对全空间体积积分之后必须为1（无量纲）。 * 结果表明，在相对论量子力学中，由于"负能态"或者对产生的可能性，使得定域态的概念非常复杂。请看本书第8章。
