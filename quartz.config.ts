@@ -72,21 +72,21 @@ const config: QuartzConfig = {
       Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),
       Plugin.Description(),
       // Plugin.Latex({ renderEngine: "katex" }),
-      Plugin.Latex({ 
-        renderEngine: 'mathjax',
-        mathJaxOptions: {
-        tex: {
-          tags: 'ams', // 完美开启 tag 和自动编号支持
-        }
-      }
-    }),
     //   Plugin.Latex({ 
-    //   renderEngine: 'katex',
-    //   katexOptions: {
-    //     strict: false, // 核心：关闭严格模式，遇到轻微语法错误时不报错罢工，而是尽量渲染
-    //     trust: true,   // 允许一些可能存在安全风险但物理中常用的命令
+    //     renderEngine: 'mathjax',
+    //     mathJaxOptions: {
+    //     tex: {
+    //       tags: 'ams', // 完美开启 tag 和自动编号支持
+    //     }
     //   }
     // }),
+      Plugin.Latex({ 
+      renderEngine: 'katex',
+      katexOptions: {
+        strict: false, // 核心：关闭严格模式，遇到轻微语法错误时不报错罢工，而是尽量渲染
+        trust: true,   // 允许一些可能存在安全风险但物理中常用的命令
+      }
+    }),
     ],
     filters: [Plugin.RemoveDrafts()],
     emitters: [

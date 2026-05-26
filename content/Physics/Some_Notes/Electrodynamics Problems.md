@@ -6,6 +6,7 @@
 - [[2023_Mid_Term]]
 - [[推迟势满足Lorenz规范的证明]]
 - [[运动点电荷的场是否会影响其本身]]
+- [[Liénard-Wiechert Potential的推导]]
 - 
 - 
 
