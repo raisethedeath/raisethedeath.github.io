@@ -7,19 +7,17 @@
 
 
 ## 习题课讲义
-- [[3.5]]
-- [[3.6]]
-- [[3.7]]
-- [[3.8]]
-- [[3.9]]
-- [[4.4]]
-- [[4.7]]
-- [[4.9]]
-- [[4.15]]
+- [[SM Problem 3.5]]
+- [[SM Problem 3.6]]
+- [[SM Problem3.9]]
+- [[SM Problem 4.4]]
+- [[SM Problem 4.7]]
+- [[SM Problem 4.9]]
+- [[SM Problem 4.15]]
 - [[Chap5 习题课P3]]
 - [[Chap5 习题课P2]]
 - [[Chap5 习题课P1]]
 
 ## Discussion
-[[Discussion Of Legendre Transformation]]
+- [[Discussion Of Legendre Transformation]]
 
