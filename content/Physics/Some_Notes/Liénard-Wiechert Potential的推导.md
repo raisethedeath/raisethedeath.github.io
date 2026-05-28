@@ -30,6 +30,7 @@ $$
 
 ### 3. 代入推迟势并换序积分
 以标量势为例，将 $\rho$ 代入：
+#Dirac_Delta_Function
 $$
 \varphi(\mathbf{r}, t) = \frac{q}{4\pi\varepsilon_0}\int \frac{\delta^3\bigl(\mathbf{r}' - \mathbf{r}_0(t_r)\bigr)}{|\mathbf{r} - \mathbf{r}'|}\,\mathrm{d}^3r'
 $$
