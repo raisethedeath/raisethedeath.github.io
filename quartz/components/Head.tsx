@@ -86,6 +86,19 @@ export default (() => {
         <meta name="description" content={description} />
         <meta name="generator" content="Quartz" />
 
+        {/* 分类 / 标签元数据 */}
+        {fileData.frontmatter?.tags && fileData.frontmatter.tags.length > 0 && (
+          <meta name="keywords" content={fileData.frontmatter.tags.join(", ")} />
+        )}
+        {/* 从 slug 提取分类目录 */}
+        {(() => {
+          const parts = fileData.slug?.split("/") ?? []
+          if (parts.length > 1) {
+            return <meta name="category" content={parts[0]} />
+          }
+          return null
+        })()}
+
         {css.map((resource) => CSSResourceToStyleElement(resource, true))}
         {js
           .filter((resource) => resource.loadTime === "beforeDOMReady")
