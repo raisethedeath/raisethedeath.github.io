@@ -11,10 +11,17 @@ interface CategoryListOptions {
   limit?: number
   /** 是否显示计数 */
   showCount?: boolean
+  /**
+   * 分类名 → 目标 slug 的映射
+   * 例如：{ "Physics": "Physics/Physics Note" } 让 "Physics" 链接到 Physics Note 页面
+   * 未映射的分类保持默认行为（链接到文件夹列表页）
+   */
+  categoryMapping?: Record<string, string>
 }
 
 const defaultOptions: CategoryListOptions = {
   showCount: true,
+  categoryMapping: {},
 }
 
 // 从 slug 提取一级分类名
@@ -54,15 +61,21 @@ export default ((userOpts?: Partial<CategoryListOptions>) => {
     return (
       <nav class={classNames(displayClass, "category-list")} aria-label="categories">
         {opts.title && <span class="category-list-title">{opts.title}</span>}
-        {displayed.map(([cat, count]) => (
-          <a
-            href={resolveRelative(fileData.slug!, `${cat}/` as FullSlug)}
-            class="internal category-link"
-          >
-            {cat}
-            {opts.showCount && <span class="category-count">{count}</span>}
-          </a>
-        ))}
+        {displayed.map(([cat, count]) => {
+          // 如果有自定义映射则使用映射的 slug，否则使用默认的文件夹路径
+          const targetSlug = opts.categoryMapping?.[cat]
+            ? (opts.categoryMapping[cat] as FullSlug)
+            : (`${cat}/` as FullSlug)
+          return (
+            <a
+              href={resolveRelative(fileData.slug!, targetSlug)}
+              class="internal category-link"
+            >
+              {cat}
+              {opts.showCount && <span class="category-count">{count}</span>}
+            </a>
+          )
+        })}
       </nav>
     )
   }

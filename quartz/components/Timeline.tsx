@@ -12,11 +12,14 @@ interface TimelineOptions {
   limit?: number
   /** 按创建时间还是修改时间排序 */
   dateType?: "created" | "modified"
+  /** 排序方向："asc" 从旧到新，"desc" 从新到旧 */
+  sortOrder?: "asc" | "desc"
 }
 
 const defaultOptions: TimelineOptions = {
   limit: undefined,
   dateType: "created",
+  sortOrder: "desc",
 }
 
 export default ((userOpts?: Partial<TimelineOptions>) => {
@@ -28,13 +31,13 @@ export default ((userOpts?: Partial<TimelineOptions>) => {
     displayClass,
     cfg,
   }: QuartzComponentProps) => {
-    // 按创建时间排序（升序，最早的在前）
+    // 按时间排序
     const sorted = [...allFiles]
       .filter((f) => f.dates && f.dates[opts.dateType!])
       .sort((a, b) => {
         const dateA = getDate(cfg, a)?.getTime() ?? 0
         const dateB = getDate(cfg, b)?.getTime() ?? 0
-        return dateA - dateB // 升序：从旧到新
+        return opts.sortOrder === "asc" ? dateA - dateB : dateB - dateA
       })
 
     const displayed = opts.limit ? sorted.slice(0, opts.limit) : sorted

@@ -14,7 +14,8 @@ title: Home
 ## Soft Condensed Matter
 - [[Soft Matter Physics]]
 ## Mathematics
-- [[Basic Topology]]
+- [[Mathematics]]
+
 # [[Computer Science]]
 # Chemistry
 
