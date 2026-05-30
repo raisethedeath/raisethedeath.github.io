@@ -1,0 +1,53 @@
+---
+title: About
+---
+
+## 👋 About Me
+
+Hi, I'm **raisethedeath**, a student in Shanghai Jiaotong University (SJTU) — welcome to my personal knowledge notebook. Perhaps someone destined to meet me will find this page and spot me in the crowd. 
+
+### Research Interests
+
+My research interests currently span all areas of physics. Since you have to immerse yourself in a specific field before you can achieve your goals, my primary focus going forward will most likely be soft condensed matter physics, an area where the tools that physicists once used to study the extreme micro- and macro-scales are now being applied in this field, which was once the domain of chemists and materials scientists.
+
+Since the future is full of uncertainty, I won’t dwell on any one issue forever. The website’s current form depends on how I think and act right now, and on the choices I make to shape my own future. The value of life lies not in what one has achieved, but in the fact that one continues to fight until the very end. Here we cite the poem from Dylan Thomas to express our fight against the destiny. Here, we quote this poem by Dylan Thomas, which served as the crowning touch in Christopher Nolan’s famous science-fiction film *Interstellar*.
+
+> [!NOTE] Do Not Go Gentle into That Good Night
+> By [Dylan Thomas]
+> Do not go gentle into that good night,
+> Old age should burn and rave at close of day;
+> Rage, rage against the dying of the light.
+>
+> Though wise men at their end know dark is right,
+> Because their words had forked no lightning they
+> Do not go gentle into that good night.
+>
+> Good men, the last wave by, crying how bright
+> Their frail deeds might have danced in a green bay,
+> Rage, rage against the dying of the light.
+>
+> Wild men who caught and sang the sun in flight,
+> And learn, too late, they grieved it on its way,
+> Do not go gentle into that good night.
+>
+> Grave men, near death, who see with blinding sight
+> Blind eyes could blaze like meteors and be gay,
+> Rage, rage against the dying of the light.
+>
+> And you, my father, there on the sad height,
+> Curse, bless, me now with your fierce tears, I pray.
+> Do not go gentle into that good night.
+> Rage, rage against the dying of the light.
+
+### About This Site
+
+This site is built with [Quartz 4](https://quartz.jzhao.xyz/) and powered by [Obsidian](https://obsidian.md/) Markdown notes — a digital garden that grows alongside my research and learning.
+
+The notes here are organized into a few broad categories:
+
+- **📓 Diary** — daily research notes and study logs
+- **🔬 Physics** — lecture notes, literature reviews, problem derivations
+- **💻 CS** — notes on Linux, Vim, Git, and other tools
+- **🧪 Chemistry** — lab reports and coursework
+
+> This site is continuously updated. Feel free to check out the source repository via the GitHub link below.

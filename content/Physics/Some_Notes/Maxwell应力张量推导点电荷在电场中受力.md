@@ -1,10 +1,10 @@
+电动力学中经常出现的积分：
 $$
 \int_0^\pi \sin\theta d\theta\int^\infty_0dr \frac{r^4\sin^2\theta}{((r^2+d^2/4)^2-r^2d^2\cos^2\theta)^{\frac{3}{2}}}
 $$
 $$
 \sigma=-\frac{\epsilon_0V_0}{2iR\pi}\ln(\frac{1-Re^{i\phi}}{1+Re^{i\phi}})
 $$
-
 
 使用麦克斯韦应力张量（Maxwell stress tensor）推导洛伦兹力公式，本质上是从**场物理学（经典场论）的动量守恒定律**出发，通过场的局域动量变化来推导出电磁场对物质的受力。
 
