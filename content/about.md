@@ -6,7 +6,7 @@ title: About
 
 Hi, I'm **raisethedeath**, a student in Shanghai Jiaotong University (SJTU) — welcome to my personal knowledge notebook. Perhaps someone destined to meet me will find this page and spot me in the crowd. 
 
-<img src="../quartz/static/icon.png" alt="alt text" style="zoom:50%;" />
+<img src="./Attachments/icon.png" alt="alt text" style="zoom:50%;" />
 
 ### Research Interests
 
