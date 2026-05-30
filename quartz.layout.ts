@@ -10,7 +10,7 @@ export const sharedPageComponents: SharedLayout = {
         "🏠 Home": "/",
         "⚛️ Physics": "/Physics/Some_Notes/Physics",
         "🔢 Math": "/Mathematics/Mathematics",
-        "💻 CS": "/Computer Science/CS",
+        "💻 CS": "/Computer_Science/CS",
         "📚 Literatures": "/Physics/Literatures",
         "📓 Diary": "/Diary/Diary",
         "📅 Timeline": "/timeline",
