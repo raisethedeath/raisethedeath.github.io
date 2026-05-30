@@ -4,10 +4,13 @@
 - [[电磁动量]]
 - [[RC瞬态电路]]
 - [[2023_Mid_Term]]
+- [[11.4]]
+- 
 - [[推迟势满足Lorenz规范的证明]]
 - [[运动点电荷的场是否会影响其本身]]
 - [[Liénard-Wiechert Potential的推导]]
 - [[运动点电荷的电场和磁场]]
+- [[The Extension Of Polar Radiation Expression]]
 - 
 - 
 

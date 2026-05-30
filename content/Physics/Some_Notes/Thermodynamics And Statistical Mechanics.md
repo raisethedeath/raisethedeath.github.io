@@ -20,4 +20,10 @@
 
 ## Discussion
 - [[Discussion Of Legendre Transformation]]
+- [[Equivalence Of Different Representations In First Order Transition]]
+- 
 
+
+## Part of the lecture notes
+- [[Chap 6： Phase Transition]]
+- 
