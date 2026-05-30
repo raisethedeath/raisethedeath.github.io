@@ -6,6 +6,8 @@ title: About
 
 Hi, I'm **raisethedeath**, a student in Shanghai Jiaotong University (SJTU) — welcome to my personal knowledge notebook. Perhaps someone destined to meet me will find this page and spot me in the crowd. 
 
+<img src="D:\Materials\Obsidian_Notebook\quartz\content\Attachments\icon.png" alt="icon" style="zoom:50%;" />
+
 ### Research Interests
 
 My research interests currently span all areas of physics. Since you have to immerse yourself in a specific field before you can achieve your goals, my primary focus going forward will most likely be soft condensed matter physics, an area where the tools that physicists once used to study the extreme micro- and macro-scales are now being applied in this field, which was once the domain of chemists and materials scientists.
