@@ -7,7 +7,19 @@ export const sharedPageComponents: SharedLayout = {
   header: [
     Component.CategoryList({
       title: "📂",
+        // links:{
+        //   Physics: "Physics/Physics Note",
+        //   Math: "Mathematics/Mathematics",
+        //   CS: "Computer Science/Computer Science",
+        //   Diary: "Diary/Diary",
+        // },
       categoryMapping: {
+        // links:{
+        //   Physics: "Physics/Physics Note",
+        //   Math: "Mathematics/Mathematics",
+        //   CS: "Computer Science/Computer Science",
+        //   Diary: "Diary/Diary",
+        // },
         Physics: "Physics/Physics Note",
         Math: "Mathematics/Mathematics",
         CS: "Computer Science/Computer Science",
@@ -59,7 +71,7 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Graph(),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
-    Component.DesktopOnly(Component.Timeline({ limit: 10, title: "📅 时间轴" })),
+    // Component.DesktopOnly(Component.Timeline({ limit: 10, title: "📅 时间轴" })),
   ],
 }
 
