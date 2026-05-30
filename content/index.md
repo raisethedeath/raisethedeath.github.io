@@ -2,7 +2,7 @@
 title: Home
 ---
 # [[Diary]]
-# [[Physics Note|Physics]]
+# [[Physics|Physics]]
 ## Electrodynamics
 - [[Electrodynamics Problems]]
 ## Thermodynamics & Statistical Mechanics
@@ -16,7 +16,7 @@ title: Home
 ## Mathematics
 - [[Mathematics]]
 
-# [[Computer Science]]
+# [[CS]]
 # Chemistry
 
 

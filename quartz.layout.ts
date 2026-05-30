@@ -8,9 +8,9 @@ export const sharedPageComponents: SharedLayout = {
     Component.Header({
       links: {
         "🏠 Home": "/",
-        "⚛️ Physics": "/Physics/Some_Notes/Physics Note",
+        "⚛️ Physics": "/Physics/Some_Notes/Physics",
         "🔢 Math": "/Mathematics/Mathematics",
-        "💻 CS": "/Computer Science/Computer Science",
+        "💻 CS": "/Computer Science/CS",
         "📚 Literatures": "/Physics/Literatures",
         "📓 Diary": "/Diary/Diary",
         "📅 Timeline": "/timeline",
