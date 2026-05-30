@@ -2,7 +2,7 @@
 title: Home
 ---
 # [[Diary]]
-# [[Physics Note]]
+# [[Physics Note|Physics]]
 ## Electrodynamics
 - [[Electrodynamics Problems]]
 ## Thermodynamics & Statistical Mechanics
