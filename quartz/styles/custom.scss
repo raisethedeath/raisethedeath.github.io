@@ -1,6 +1,12 @@
 @use "./base.scss";
 
 // put your custom CSS here!
+
+/* 全局字体放大：基础字号从 16px 提升到 18px */
+html {
+  font-size: 112.5%;
+}
+
 p, li {
   word-wrap: break-word;
   overflow-wrap: break-word;
