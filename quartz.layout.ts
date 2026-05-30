@@ -5,30 +5,16 @@ import * as Component from "./quartz/components"
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [
-    Component.CategoryList({
-      title: "📂",
-        // links:{
-        //   Physics: "Physics/Physics Note",
-        //   Math: "Mathematics/Mathematics",
-        //   CS: "Computer Science/Computer Science",
-        //   Diary: "Diary/Diary",
-        // },
-      categoryMapping: {
-        // links:{
-        //   Physics: "Physics/Physics Note",
-        //   Math: "Mathematics/Mathematics",
-        //   CS: "Computer Science/Computer Science",
-        //   Diary: "Diary/Diary",
-        // },
-        Physics: "Physics/Physics Note",
-        Math: "Mathematics/Mathematics",
-        CS: "Computer Science/Computer Science",
-        Diary: "Diary/Diary",
+    Component.Header({
+      links: {
+        "🏠 Home": "/",
+        Physics: "/Physics/",
+        Math: "/Mathematics/",
+        CS: "/Computer-Science/",
+        Diary: "/Diary/",
+        "📅 Timeline": "/timeline",
+        "📝 About": "/about",
       },
-    }),
-    Component.Timeline({
-      title: "📅 Timeline",
-      sortOrder: "desc",
     }),
   ],
   afterBody: [],
@@ -47,6 +33,10 @@ export const defaultContentPageLayout: PageLayout = {
     Component.ConditionalRender({
       component: Component.Breadcrumbs(),
       condition: (page) => page.fileData.slug !== "index",
+    }),
+    Component.ConditionalRender({
+      component: Component.Timeline({ title: "📅 Timeline", sortOrder: "desc" }),
+      condition: (page) => page.fileData.slug === "timeline",
     }),
     Component.ArticleTitle(),
     Component.ContentMeta(),
