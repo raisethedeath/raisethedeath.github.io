@@ -1,2 +1,4 @@
 - [[Falling through the Cracks Energy Storage along Segmented Brittle Crack Fronts]]
+- [[Phase-field study of the effective fracture energy increase during dynamic crack propagation in disordered heterogeneous materials]]
+- [[How Material Heterogeneity Creates Rough Fractures]]
 - 
