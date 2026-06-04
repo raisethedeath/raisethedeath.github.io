@@ -14,9 +14,13 @@
 - [[SM Problem 4.7]]
 - [[SM Problem 4.9]]
 - [[SM Problem 4.15]]
-- [[Chap5 习题课P3]]
-- [[Chap5 习题课P2]]
 - [[Chap5 习题课P1]]
+- [[Chap5 习题课P2]]
+- [[Chap5 习题课P3]]
+- [[Chap6 习题课P1]]
+- [[Chap6 习题课P2]]
+- [[Chap6 习题课P3]]
+- 
 
 ## Discussion
 - [[Discussion Of Legendre Transformation]]
