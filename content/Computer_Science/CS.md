@@ -1,15 +1,12 @@
 - [[超算平台登录]]
 - [[latex使用习惯]]
-- 
 - [[Linux系统常用操作指令汇总]]
-- [[Vim常用指令汇总]]
-- [[Vim的复制粘贴]]
-- [[Vim查找功能]]
+- [[vim]]
 - [[Claude Code]]
 - [[Python_Linux]]
-- [[git]]
+- [[github]]
 - [[Obsidian]]
-- [[Skills]]
-- [[Skills2]]
+- [[Skill]]
+- 
 
 

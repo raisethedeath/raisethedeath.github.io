@@ -25,6 +25,7 @@
 ## Discussion
 - [[Discussion Of Legendre Transformation]]
 - [[Equivalence Of Different Representations In First Order Transition]]
+- [[Spinodal vs Binodal]]
 - 
 
 
