@@ -1,3 +1,4 @@
+
 这是一篇发表在物理学顶级期刊《Physical Review Letters》(PRL) 上的杰出实验物理学论文，标题为 **"Friction-Controlled Entropy-Stability Competition in Granular Systems"（颗粒系统中由摩擦力控制的熵与稳定性的竞争）**。作者团队主要来自上海交通大学（张洁教授团队）、法国蒙彼利埃大学和英国剑桥大学。
 
 该论文通过精心设计的循环剪切实验，研究了**二维颗粒材料接触网络**的微观拓扑结构，首次揭示了颗粒材料的自组织结构是由**“构型熵（Entropy）”**与**“力学稳定性（Mechanical Stability）”**之间的竞争决定的，而**“摩擦力（Friction）”**正是调控这一竞争的核心物理量。

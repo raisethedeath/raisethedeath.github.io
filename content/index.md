@@ -2,6 +2,7 @@
 title: Home
 ---
 # [[Diary]]
+
 # [[Physics|Physics]]
 ## Electrodynamics
 - [[Electrodynamics Problems]]

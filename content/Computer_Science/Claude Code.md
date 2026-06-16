@@ -1,6 +1,6 @@
 # Claude Code 使用指南：从入门到项目全流程实战
 
-- [[CLaude调用API的部分原理]]
+- [[Claude调用API的部分原理]]
 - 
 
 ## 目录

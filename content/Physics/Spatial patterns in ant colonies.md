@@ -1,3 +1,4 @@
+#Reaction-diffusion
 这是一篇发表在顶级期刊《PNAS》（2002年）上的经典交叉学科论文，标题为 **"Spatial patterns in ant colonies"（蚂蚁群落中的空间斑图）**。
 
 该论文通过精密的实验设计和严谨的数学物理建模，首次在高级生物（蚂蚁）系统中，定量地证明了“局部激活-长程抑制（Local Activation-Long Range Inhibition, LALI）”**机制是生物群体自组织形成宏观空间结构（如蚂蚁墓地）的核心动力学基础。这一机制最早由阿兰·图灵（Alan Turing）在1952年提出，用于解释生物形态发生学。

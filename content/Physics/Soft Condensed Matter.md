@@ -11,5 +11,11 @@
 
 ## [[Crack]]
 
+## [[Dislocation]]
+
+## [[Diffusion And Reaction Model]]
+
+## [[Stochastic And Brownian]]
+
 
 

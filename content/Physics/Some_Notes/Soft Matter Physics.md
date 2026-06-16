@@ -2,4 +2,7 @@
 - [[van Hove Distribution Function]]
 - [[Rayleigh Benard convection]]
 - [[Temperature And Thermodyanmics In Particles]]
+- [[Airy Function In Elasticity Theory]]
+- [[Non-Gauss Distribution in particle velocity]]
+- 
 - 
