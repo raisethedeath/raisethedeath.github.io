@@ -173,6 +173,11 @@ $$n_e = \frac{m_e \varepsilon_0 \omega_p^2}{e^2} = \frac{9.1\times 10^{-31} \tim
 
 ### 7. 相对论多普勒效应
 
+> [!NOTE] Note
+> 值得注意的是我们必须清楚波矢就是光传播的一个特定方向，因此观察的角度决定了波矢的方向。
+> 这里和一般的小球运动不同，**因为光的传播方向是由我们特定的观察给定的**
+
+
 设原子速度为 $v$（注：题干中符号 $\nu$ 应为排版错误，为避免与频率混淆，公式中用 $v$ 表示速度），$\beta = \frac{v}{c}$，$\gamma = \frac{1}{\sqrt{1-\beta^2}}$。频率变换通式为 $f = f_0 \frac{\sqrt{1-\beta^2}}{1-\beta\cos\theta}$，对应波长通式为 $\lambda = \lambda_0 \frac{1-\beta\cos\theta}{\sqrt{1-\beta^2}} = \lambda_0 \gamma (1-\beta\cos\theta)$。
 
 **[1]. 顺着 $v$（纵向，迎面靠近观察）：** 

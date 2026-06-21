@@ -4,5 +4,6 @@
 - [[Temperature And Thermodyanmics In Particles]]
 - [[Airy Function In Elasticity Theory]]
 - [[Non-Gauss Distribution in particle velocity]]
+- [[高分子溶胀]]
 - 
 - 

@@ -2,6 +2,7 @@
 title: About
 ---
 <center>细推物理须行乐 何用浮名绊此生</center>
+
 ## 👋 About Me
 
 Hi, I'm **raisethedeath**, a student in Shanghai Jiaotong University (SJTU) — welcome to my personal knowledge notebook. Perhaps someone destined to meet me will find this page and spot me in the crowd. 
