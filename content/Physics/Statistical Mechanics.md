@@ -5,4 +5,6 @@
 - [[Observation of a discrete time crystal]]
 - [[Classical Hamiltonian time crystals–general theory and simple examples]]
 - [[FUNCTIONAL LIMIT THEOREMS FOR THE BOUCHAUD TRAP MODEL WITH SLOWLY VARYING TRAPS]]
+- [[Resolving Feynman’s restaurant problem reveals optimal solutions and human strategies]]
+- 
 
