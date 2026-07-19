@@ -38,6 +38,7 @@
 - [[A Note On RG Theory]]
 - [[Fugacity]]
 - [[Paradoxes in the BEC]]
+- [[Lecture Note On Parisi's Replica Symmetry Broken-2021]]
 - 
 
 

@@ -71,7 +71,7 @@ $$ \mathcal{E}_{lig} = \int_{V_{lig}} W dV \approx \sum_{i \in lig} W_i V_i $$
 ---
 
 ### 六、 局部应力场与有效内聚力区模型（Main Fig. 5, 11 & SM Fig. 12-15）
-
+[[牵引-分离法则的进一步讨论]]
 为了进一步探究这种结构强化效应，作者提取了**牵引-分离法则（Traction-Separation Law）**。
 
 **1. 局部应力的计算（SM Eq. 4-6）：**

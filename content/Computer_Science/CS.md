@@ -3,6 +3,7 @@
 - [[Linux系统常用操作指令汇总]]
 - [[vim]]
 - [[Claude Code]]
+- [[OpenCode_Guide]]
 - [[Python_Linux]]
 - [[github]]
 - [[Obsidian]]

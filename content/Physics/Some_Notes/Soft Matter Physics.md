@@ -2,8 +2,8 @@
 - [[van Hove Distribution Function]]
 - [[Rayleigh Benard convection]]
 - [[Temperature And Thermodyanmics In Particles]]
-- [[Airy Function In Elasticity Theory]]
 - [[Non-Gauss Distribution in particle velocity]]
-- [[高分子溶胀]]
+- [[Polymer Swelling]]
+- [[Run And Tumble Particles]]
 - 
 - 

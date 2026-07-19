@@ -3,6 +3,10 @@ title: Home
 ---
 # [[Diary]]
 
+## [[Poems]]
+
+## [[Literatures]]
+
 # [[Physics|Physics]]
 ## Electrodynamics
 - [[Electrodynamics Problems]]
@@ -18,6 +22,9 @@ title: Home
 - [[Mathematics]]
 
 # [[CS]]
-# Chemistry
+
+# [[Scientific Research Note]]
+
+
 
 

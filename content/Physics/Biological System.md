@@ -3,4 +3,8 @@
 - [[Nonequilibrium Thermodynamics of Biochemical Networks Energetics of Cellular Functions]]
 - [[Active Brownian Particles, ABPs]]
 - [[Nocturnal ants navigate using a time-compensated lunar compass]]
+- [[Bacterial hopping and trapping in porous media]]
+- [[Confinement and activity regulate bacterial motion in porous media]]
+- [[Individual locomotor bias drives counterclockwise motion in pedestrian crowds]]
+- [[Bacterial strategies for chemotaxis response]]
 - 

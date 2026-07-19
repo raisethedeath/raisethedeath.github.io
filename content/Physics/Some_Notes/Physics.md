@@ -5,4 +5,6 @@
 - [[Quantum Mechanics]]
 - [[Soft Matter Physics]]
 - 
-
+## Reading Notes
+- [[Entropy, Order Parameter and Complexity]]
+- 

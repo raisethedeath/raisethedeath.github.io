@@ -1,2 +1,3 @@
 - [[The revised elastic field of an edge dislocation]]
+- [[A further modification of the elastic field of an edge dislocation]]
 - 

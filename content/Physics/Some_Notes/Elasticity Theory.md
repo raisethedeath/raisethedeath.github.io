@@ -1,2 +1,6 @@
 - [[Polar Decomposition Of Deformation Gradient Tensor]]
+- [[Different Definitions Of Strain And Stress Tensor]]
+- [[Airy Function In Elasticity Theory]]
+- [[Neo-Hookean Model]]
+- [[Effective normal coefficient of restitution]]
 - 
