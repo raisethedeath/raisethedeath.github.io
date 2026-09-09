@@ -54,4 +54,17 @@
 54. [[Individual locomotor bias drives counterclockwise motion in pedestrian crowds]]
 55. [[Bacterial strategies for chemotaxis response]]
 56. [[Microscopic Theory for the Diffusion of an Active Particle in a Crowded Environment]]
-57. 
+57. [[Very Persistent Random Walkers Reveal Transitions in Landscape Topology]]
+58. [[Non-equilibrium glass transitions in driven and active matter]]
+59. [[Statistical mechanics of active Ornstein-Uhlenbeck particles]]
+60. [[Excess entropy and long-time diffusion in colloidal fluids with short-range interparticle attraction]]
+61. [[Depletion-driven antiferromagnetic, paramagnetic, and ferromagnetic behavior in quasi-two-dimensional buckled colloidal solids]]
+62. [[Collective motion of self-propelled particles interacting without cohesion]]
+63. [[Stochastic modeling of long-legged ant A. gracilipes locomotion in laboratory experiments]]
+64. [[Magnetic active matter across scales]]
+65. [[Branched flows in active random walks and the formation of ant trail patterns]]
+66. [[Ice rule and emergent frustration in particle ice and beyond]]
+67. [[Effect of Weak Non-Conservative Dynamics on Pattern Formation in Scalar Active Matter]]
+68. [[Curved Odd Elasticity]]
+69. 
+
